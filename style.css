@@ -81,10 +81,10 @@ header {
 header .logo {
     margin: 0;
     padding: 25px 30px;
-    font-weight: bold;
+    font-weight: 800;
     color: blueviolet;
     font-size: 2.4em;
-    text-shadow: 2px 1px 0 rgb(255, 255, 255), -2px 2px 2px #cdc6c6, -2px 4px 1px rgb(165, 163, 163), -3px 5px 1px #c2bebe;
+    padding-right: 20px;
 }
 
 header .container {
@@ -127,7 +127,7 @@ header nav a:hover {
   border: .5px solid rgb(241, 241, 42);
   background-color: rgb(241, 241, 42);
   border-radius: 30px;
-  transition: 100ms;
+  transition: 00ms;
 }
 
 #hero {
@@ -169,6 +169,11 @@ header nav a:hover {
   cursor: pointer;
 }
 
+#somos-proya{
+  background-color: yellow;
+}
+
+
 #somos-proya .container {
   text-align: center;
   padding: 200px 12px;
@@ -207,8 +212,10 @@ header nav a:hover {
 
 .programas {
   display: flex;
-  gap: 50px;
+  gap: 150px;
   flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 100px;
 }
 
 #nuestros-programas {
@@ -220,12 +227,15 @@ header nav a:hover {
 #nuestros-programas .container{
   padding: 150px 12px;
   flex-wrap: nowrap;
+  width: 100%;
 }
 
 
 #nuestros-programas h2 {
   font-size: 5em;
   margin-top: -90px;
+  text-decoration: underline 12px yellow;
+
 }
 
 #nuestros-programas h3 {
@@ -238,22 +248,69 @@ header nav a:hover {
 }
 
 .container .carta {
+  display: flex;
   background-position: center center;
   background-size: cover;
   border-radius: 15px;
   width: 350px;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: 40px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px 5px #000000;
 }
 
-.carta:first-child {
-  background-image: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    ),
-    url(./img/front-end.png);
+.carta button{
+  cursor: pointer;
 }
 
-.carta:nth-child(2) {
+.titulo-card{
+  z-index: 999;
+}
+
+
+.contenedor-titulo{
+  background-image: url(./img/front-end.png);
+  height: 25%;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-titulo2{
+  background-image: url(./img/full-stack.jpg);
+  height: 25%;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-titulo3{
+  background-image: url(./img/python.jpg);
+  height: 25%;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.background-titulo{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #00000059;
+}
+
+
+
+/* .carta:nth-child(2) {
   background-image: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.5),
@@ -269,7 +326,7 @@ header nav a:hover {
       rgba(0, 0, 0, 0.5)
     ),
     url(img/python.jpg);
-}
+} */
 
 #caracteristicas {
   display: flex;
@@ -303,7 +360,7 @@ header nav a:hover {
   text-align: center;
   background-color: rgb(30, 30, 30);
   color: white;
-  height: 60vh;
+  height: 70vh;
   gap: 90px;
 }
 
@@ -312,7 +369,16 @@ header nav a:hover {
 }
 
 #final button {
-  font-size: 2em;
+  font-size: 3em;
+  border-radius: 22px;
+  background-color: yellow;
+  color: black;
+}
+
+#final button:hover {
+  background-color: blueviolet;
+  cursor: pointer;
+  transition: 400ms;
 }
 
 footer {
@@ -395,5 +461,16 @@ footer .container {
 
 .gmap_iframe {
   width: 100%!important;
-  height: 754px!important;
+  height: 838px!important;
+}
+
+@media (max-width: 768px){
+
+  .container ul{
+      display: flex;
+      gap: 100px;
+      width: 100%;
+      flex-wrap: wrap;
+  }
+  
 }

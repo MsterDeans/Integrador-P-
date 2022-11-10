@@ -31,6 +31,7 @@ body{
     box-shadow: 0 10px 30px -5px rgb(250, 6, 197);
     text-align: center;
     justify-content: center;
+    align-items: center;
 }
 
 .form__title{
